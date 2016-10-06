@@ -1,10 +1,12 @@
 CMake-based LuaJIT + Luarocks
 =============================
 
+###***Updated to provide luajit 2.1.0 beta2 and Luarocks 2.4***
+
 # What's the point? #
 
 We want to provide an easy to way to users for installing _recent_ versions
-of LuaJIT (or Lua) and luarocks, with almost no efforts.
+of LuaJIT (or Lua) and luarocks, with almost no efforts. The current defaults are LuaJIT 2.1.0-beta1 and luarocks 2.4.
 
 The provided LuaJIT (or Lua) and luarocks point to their respective git
 repository. We did not make any changes, except the compilation and
@@ -46,6 +48,8 @@ Then under Unix systems:
 make install
 ```
 
+Probably have to symlink `/your/prefix/bin/lua` to `/your/prefix/bin/luajit` in order to get luarocks to work.
+
 Under Windows:
 ```sh
 nmake install
@@ -58,4 +62,7 @@ Note: we do not recommend (nor we support) installation under Cygwin.
   - If you prefer vanilla Lua 5.1 instead of LuaJIT, use `-DWITH_LUA51=ON`
   - If you prefer vanilla Lua 5.1 with reference counting instead of LuaJIT, use `-DWITH_LUA51RC=ON` (*experimental*)
   - If you prefer vanilla Lua 5.2 instead of LuaJIT, use `-DWITH_LUA52=ON`
-  - If you prefer LuaJIT 2.1 instead of LuaJIT 2.0, use `-DWITH_LUAJIT21=ON`
+  - If you prefer LuaJIT 2.0 instead of LuaJIT 2.1.0 beta2, use `-DWITH_LUAJIT20=ON`
+  - If you prefer LuaJIT 2.1.0-beta1 instead of LuaJIT 2.1.0-beta2, use `-DWITH_LUAJIT21_BETA1=ON`
+  
+  - If you prefer luarocks 2.3 instead of luarocks 2.4, use `-DWITH_LUAROCKS23=ON`
