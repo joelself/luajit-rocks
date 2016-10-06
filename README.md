@@ -1,7 +1,7 @@
 CMake-based LuaJIT + Luarocks
 =============================
 
-###***Updated to provide luaJIT 2.1.0-beta2 and luarocks 2.4***
+###***Updated to provide LuaJIT 2.1.0-beta2 and luarocks 2.4***
 
 # What's the point? #
 
